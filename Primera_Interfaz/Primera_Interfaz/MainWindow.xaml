@@ -1,0 +1,81 @@
+﻿<Window x:Class="Primera_Interfaz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Primera_Interfaz"
+        mc:Ignorable="d"
+        Title=" Calculadora" Height="600" Width="500" 
+        ResizeMode="NoResize">
+
+    <Grid Background="Black" >
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.05*"></RowDefinition> 
+            
+        </Grid.RowDefinitions>
+
+        <Border  Grid.ColumnSpan="4" Margin="10" BorderThickness="2" BorderBrush="White">
+
+            <TextBlock Name="MiTextBlock" Grid.ColumnSpan="4" Margin="10" MaxWidth="650" FontSize="40" Foreground="White" FontFamily="Arial" FontWeight="Bold" 
+            HorizontalAlignment="Right" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" > 0 </TextBlock>
+
+        </Border>
+        
+        <Button Grid.Column="0" Grid.Row="1" Click="Clickar_Porcentaje" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DimGray"  FontWeight="Bold">%</Button>
+
+        <Button Grid.Column="1" Grid.Row="1" Name="BorrarTodo" Click="Borrar_Todo" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DimGray" FontWeight="Bold">C</Button>
+
+        <Button Grid.Column="2" Grid.Row="1" Name="Borrar1Elemento" Click="Borrar_1_Elemento" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DimGray"  FontWeight="Bold">⌫</Button>
+
+        <Button Grid.Column="0" Grid.Row="2" Name="Numero7" Click="Clickar_7" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">7</Button>
+
+        <Button Grid.Column="1" Grid.Row="2" Name="Numero8" Click="Clickar_8" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">8</Button>
+
+        <Button Grid.Column="2" Grid.Row="2" Name="Numero9" Click="Clickar_9" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">9</Button>
+
+        <Button Grid.Column="4" Grid.Row="1" Click="Clickar_Division" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DimGray" FontWeight="Bold">÷</Button>
+
+        <Button Grid.Column="0" Grid.Row="3" Name="Numero4" Click="Clickar_4" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">4</Button>
+
+        <Button Grid.Column="1" Grid.Row="3" Name="Numero5" Click="Clickar_5" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">5</Button>
+
+        <Button Grid.Column="2" Grid.Row="3" Name="Numero6" Click="Clickar_6" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">6</Button>
+
+        <Button Grid.Column="4" Grid.Row="2" Click="Clickar_Multiplicacion" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DimGray" FontWeight="Bold">x</Button>
+
+        <Button Grid.Column="0" Grid.Row="4" Name="Numero1" Click="Clickar_1" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">1</Button>
+
+        <Button Grid.Column="1" Grid.Row="4" Name="Numero2" Click="Clickar_2" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold">2</Button>
+
+        <Button Grid.Column="2" Grid.Row="4" Name="Numero3" Click="Clickar_3" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold" >3</Button>
+
+        <Button Grid.Column="4" Grid.Row="3" Click="Clickar_Resta" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DimGray" FontWeight="Bold"  >-</Button>
+
+        <Button Grid.Column="0" Grid.Row="5" Name="Numero0" Click="Clickar_0" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold" >0</Button>
+
+        <Button Grid.Column="1" Grid.Row="5" Click="Clickar_Coma" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DarkGray" FontWeight="Bold" >,</Button>
+
+        <Button Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Click="Clickar_Resultado" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Background="White" FontWeight="Bold">=</Button>
+
+        <Button Grid.Column="5" Grid.Row="4" Click="Clickar_Suma" ClickMode="Press" Margin="5" BorderBrush="Black" BorderThickness="3" FontSize="25" Foreground="White" Background="DimGray" FontWeight="Bold" >+</Button>
+        
+    </Grid>
+
+</Window>
